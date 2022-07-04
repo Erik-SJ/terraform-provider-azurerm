@@ -23,7 +23,7 @@ resource "azurerm_virtual_machine" "example" {
     id = "${data.azurerm_image.custom.id}"
   }
 
-  storage_os_disk {
+  os_disk {
     name              = "osdisk"
     caching           = "ReadWrite"
     create_option     = "FromImage"
